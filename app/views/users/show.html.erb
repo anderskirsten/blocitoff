@@ -1,23 +1,25 @@
 <div class="row">
     <div class="col-md-8">
         <div class="media">
-            <br />
-            <% avatar_url = @user.avatar_url(128) %>
-            <% if avatar_url %>
-                <div class="media-left">
-                    <%= image_tag avatar_url, class: 'media-object' %>
-                </div>
-            <% end %>
+            <div class="media-left">
+                <%= image_tag @user.avatar_url(128), class: 'media-object' %>
+            </div>
             <div class="media-body">
                 <h2 class="media-heading">Welcome <%= @user.email %>!</h2>
             </div>
         </div>
     </div>
+</div>
+<div class="row">
     <div class="col-md-8">
-        <%= render 'items/item' %>
+        <h4>Your Todo List:</h4>
+        <%= render(@items) || content_tag(:h4, 'Looks like you got everything done! Go have some fun.') %>
     </div>
+</div>
+<div class="row">
     <div class="col-md-8">
         <%= render 'items/form' %>
     </div>
-</div>
+</div>    
+
 

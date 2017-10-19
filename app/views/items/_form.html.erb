@@ -1,12 +1,14 @@
-<div class="row col-md-8">
-    <h4>Create a new todo list item:</h4>
+<div class="row">
+    <div class="col-md-8">
+        <h4>Create a new todo list item:</h4>
 
-    <%= form_for [@user, @item] do |f| %>
-        <div class="form-group">
-            <%= f.text_area :name, rows: 2, class: 'form-control', placeholder: "New Task Name/Description" %>
-        </div>
-        <div class="form-group">
-            <%= f.submit "Save", class: 'btn btn-success' %>
-        </div>
-    <% end %>
+        <%= form_for [@user, @item] do |f| %>
+            <div class="form-group">
+                <%= f.text_area :name, rows: 2, class: 'form-control', placeholder: "New Task Name/Description" %>
+            </div>
+            <div class="form-group">
+                <%= f.submit "Save", class: 'btn btn-success' %>
+            </div>
+        <% end %>
+    </div>
 </div>
