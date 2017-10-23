@@ -1,3 +1,13 @@
-<strong>
-    <%= item.name %> <br />  
-</strong>
+<div class="row">    
+    <div class="pull-left">
+        <%= link_to "", [@user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+    </div>
+    <div id="item-check" class="col-md-4">
+        <strong>
+            <%= item.name %> <br /> 
+        </strong>
+    </div>
+</div>
+
+    
+

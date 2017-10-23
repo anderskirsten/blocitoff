@@ -2,7 +2,7 @@
     <div class="col-md-8">
         <h4>Create a new todo list item:</h4>
 
-        <%= form_for [@user, @item] do |f| %>
+        <%= form_for [@user, @item], remote: true do |f| %>
             <div class="form-group">
                 <%= f.text_area :name, rows: 2, class: 'form-control', placeholder: "New Task Name/Description" %>
             </div>
