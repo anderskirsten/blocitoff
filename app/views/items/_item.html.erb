@@ -3,9 +3,8 @@
         <%= link_to "", [@user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
     </div>
     <div id="item-check" class="col-md-4">
-        <strong>
-            <%= item.name %> <br /> 
-        </strong>
+        <strong><%= item.name %></strong><br />
+        <small class="time-ago"><%= distance_of_time_in_words(Time.now, item.created_at + 7.days) %> left to complete this task</small><br />
     </div>
 </div>
 
