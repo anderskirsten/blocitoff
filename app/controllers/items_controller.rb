@@ -22,14 +22,7 @@ class ItemsController < ApplicationController
   
   def destroy
     @item = Item.find(params[:id])
-    
-    if @item.destroy
-      flash[:notice] = "'#{@item.name}' has been marked as complete and deleted from your todo list."
-      redirect_to authenticated_root_path
-    else
-      flash[:alert] = "There was a problem marking this item as complete. Please try again."
-      redirect_to authenticated_root_path
-    end
+    @item.destroy
   end
   
   private
