@@ -22,6 +22,14 @@ users.each do |user|
             name: Faker::Food.unique.dish
             )
     end
+    
+    2.times do
+        Item.create!(
+            user_id: user.id,
+            name: Faker::Food.unique.dish,
+            created_at: 3.months.ago
+            )
+    end
 end
 
 puts "Seed finished"

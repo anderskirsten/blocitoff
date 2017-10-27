@@ -10,14 +10,7 @@ class ItemsController < ApplicationController
     
     @item = Item.new(item_params)
     @item.user = @user
-    
-    if @item.save!
-      flash[:notice] = "'#{@item.name}' has been added to your todo list."
-      redirect_to authenticated_root_path
-    else
-      flash[:alert] = "There was a problem saving this item to your todo list. Please try again."
-      redirect_to authenticated_root_path
-    end
+    @item.save!
   end
   
   def destroy

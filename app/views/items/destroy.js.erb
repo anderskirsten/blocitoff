@@ -1,3 +1,2 @@
-
-$("div#item-<%= @item.id %>").remove();
-$('#flash').html("<div class="alert alert-success"><%= @item.name %> has been marked as complete and deleted from your todo list.</div>");
+$('#item-<%= @item.id %>').remove();
+$('#flash').html('<div class="alert alert-success"><strong><%= @item.name %></strong> has been marked as complete and deleted from your todo list.</div>');
