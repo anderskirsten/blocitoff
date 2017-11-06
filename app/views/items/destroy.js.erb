@@ -1,2 +1,3 @@
 $('#item-<%= @item.id %>').remove();
 $('#flash').html('<div class="alert alert-success"><strong><%= @item.name %></strong> has been marked as complete and deleted from your todo list.</div>');
+blocmetrics.report('task completed');

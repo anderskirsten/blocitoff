@@ -1,3 +1,4 @@
-$('.items').append('<%= j (render @item) %>')
+$('.items').append('<%= j (render @item) %>');
 $('#flash').html('<div class="alert alert-success"><strong><%= @item.name %></strong> has been added to your todo list.</div>');
-$('#new_item')[0].reset()
+blocmetrics.report('new task created');
+$('#new_item')[0].reset();
